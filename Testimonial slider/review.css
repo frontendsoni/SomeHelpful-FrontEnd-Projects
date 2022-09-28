@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(210,36%,96%);
+    height: 100vh;
+    display: flex;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: auto;
+    width: 40%;
+    text-align: center;
+}
+
+.review-header {
+    padding: 30px 0;
+}
+
+.review-header h1 {
+    font-size: 2.5rem;
+}
+
+.review-header .underline {
+    width: 12%;
+    border-bottom: 4px solid teal;
+    margin: 5px auto;
+}
+
+.review-card {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.review-card #image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.review-card #image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-card h4 {
+    letter-spacing: 2px;
+    padding: 15px 0 5px 0;
+}
+
+.review-card #job {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: hsl(205, 78%, 60%);
+    margin-bottom: 1rem;
+}
+
+.review-card #text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.review-card .btn-container button {
+    background-color: transparent;
+    border: none;
+    padding: 20px 10px;
+    font-size: 1rem;
+    color: hsl(205, 78%, 60%);
+    cursor: pointer;
+}
+
+.review-card .surprise-btn button {
+    background-color: transparent;
+    border: 1.5px solid hsl(205, 78%, 60%);
+    color: hsl(205, 78%, 60%);
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.review-card .surprise-btn .random-btn:hover {
+    background-color: hsl(205, 78%, 60%);
+    color: white;
+}

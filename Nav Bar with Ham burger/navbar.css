@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(210, 36%, 96%);
+    font-family: sans-serif;
+}
+
+/* Navigation header */
+nav {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem;
+}
+
+.nav-header .nav-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+    color: hsl(205, 78%, 60%);
+    transition: all 0.3s linear;
+}
+
+.nav-header .nav-toggle:hover {
+    color: hsl(205, 86%, 17%);
+    transform:rotate(-90deg);
+}
+
+.nav-links a{
+    display: block;
+    color:  hsl(209, 34%, 30%);
+    letter-spacing: 0.1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: hsl(205, 86%, 81%);
+    color: hsl(205, 78%, 60%);
+    padding-left: 1.5rem;
+}
+
+.social-icons {
+    display: none;
+}
+
+.nav-links {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.show-links {
+    height: 10rem;
+}
+
+@media only screen and (min-width:768px) {
+    .nav-header .nav-toggle {
+        display: none;
+    }
+    .nav-center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .nav-links{
+        display: flex;
+        height: auto;
+    }
+    .nav-links a {
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+    .nav-links a:hover{
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .social-icons {
+        display: flex;
+        transition: all 0.3s linear;
+    }
+
+    
+    .social-icons i {
+        padding: 0.5rem 1rem;
+        color: hsl(205, 78%, 60%);
+    }
+
+    .social-icons i:hover {
+        color: hsl(205, 90%, 76%);
+    }
+
+    ul {
+        list-style-type: none;
+    }
+}
+
+
+
+
+/* .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+} */

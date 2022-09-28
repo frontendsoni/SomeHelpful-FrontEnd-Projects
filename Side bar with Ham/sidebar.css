@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(210, 36%, 96%);
+    font-family: sans-serif;
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    font-size: 2rem;
+    background: transparent;
+    color: hsl(205, 78%, 60%);
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.sidebar-toggle:hover {
+    color: hsl(205, 86%, 17%);
+}
+
+@keyframes bounce {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.25);}
+    100% {transform: scale(1);}
+}
+
+.sidebar .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.sidebar .header .remove-class {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1.75rem;
+    color: hsl(360, 67%, 44%);
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.sidebar .header .remove-class:hover {
+    color: hsl(360, 71%, 66%);
+    transform: rotate(-360deg);
+}
+
+.sidebar .links li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s linear;
+    color: hsl(209, 34%, 30%);
+    display: block;
+}
+.sidebar .links li a:hover {
+    background-color: hsl(210, 31%, 80%);
+    color: hsl(210, 22%, 49%);
+    padding-left: 1.75rem;
+}
+
+.sidebar .header .logo {
+    justify-self: center;
+    height: 40px;
+}
+
+.sidebar .social-icons {
+    display: flex;
+    list-style: none;
+    justify-self: center;
+    padding-bottom: 2rem;
+}
+
+.sidebar .social-icons a {
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+    color: hsl(205, 86%, 17%);
+}
+
+.sidebar .social-icons a:hover {
+    color: hsl(205, 78%, 60%);
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: all 0.3s linear;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    transform: translate(-100%);
+}
+.show-sidebar {
+    transform: translate(0);
+}
+
+@media only screen and (min-width:646px){
+    .sidebar {
+        width: 400px;
+    }
+    
+}
